@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "declaration": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "types": ["node"],
+    "baseUrl": ".",
+    "paths": {
+      "@rsk/bridge-state": ["packages/bridge-state/src/index.ts"],
+      "@rsk/core": ["packages/core/src/index.ts"],
+      "@rsk/config": ["packages/config/src/index.ts"],
+      "@rsk/llm": ["packages/llm/src/index.ts"],
+      "@rsk/mcp-adapter": ["packages/mcp-adapter/src/index.ts"],
+      "@rsk/observability": ["packages/observability/src/index.ts"],
+      "@rsk/orchestrator": ["packages/orchestrator/src/index.ts"]
+    }
+  }
+}

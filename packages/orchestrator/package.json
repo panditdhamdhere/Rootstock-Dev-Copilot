@@ -1,0 +1,25 @@
+{
+  "name": "@rsk/orchestrator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/index.ts",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint src --ext .ts"
+  },
+  "dependencies": {
+    "@rsk/bridge-state": "0.1.0",
+    "@rsk/core": "0.1.0",
+    "@rsk/llm": "0.1.0",
+    "@rsk/mcp-adapter": "0.1.0",
+    "@rsk/observability": "0.1.0"
+  }
+}

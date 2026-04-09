@@ -1,0 +1,35 @@
+{
+  "name": "@rsk/vscode",
+  "displayName": "RSK MCP Dev Client",
+  "description": "Natural language Rootstock MCP assistant inside VS Code",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/extension.js",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "activationEvents": [
+    "onCommand:rskMcp.query"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "rskMcp.query",
+        "title": "RSK MCP: Run Natural Language Query"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/extension.ts",
+    "test": "vitest run --passWithNoTests",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint src --ext .ts"
+  },
+  "dependencies": {
+    "@rsk/config": "0.1.0",
+    "@rsk/orchestrator": "0.1.0",
+    "@types/vscode": "^1.90.0"
+  }
+}

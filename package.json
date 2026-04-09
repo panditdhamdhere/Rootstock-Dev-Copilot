@@ -1,0 +1,38 @@
+{
+  "name": "rsk-mcp-dev-client",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Natural language developer client for Rootstock MCP",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run -ws build",
+    "dev": "npm run -w @rsk/cli dev --",
+    "dev:vscode": "npm run -w @rsk/vscode dev",
+    "start": "npm run -w @rsk/cli dev --",
+    "smoke": "tsx scripts/prod-smoke.ts",
+    "live:readiness": "tsx scripts/live-readiness.ts",
+    "verify:prod": "npm run lint && npm run typecheck && npm run test && npm run smoke",
+    "ready": "npm run verify:prod && npm run live:readiness",
+    "test": "npm run -ws test",
+    "typecheck": "npm run -ws typecheck",
+    "lint": "npm run -ws lint"
+  },
+  "devDependencies": {
+    "@types/node": "^24.8.1",
+    "@typescript-eslint/eslint-plugin": "^8.46.1",
+    "@typescript-eslint/parser": "^8.46.1",
+    "eslint": "^9.38.0",
+    "prettier": "^3.6.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "commander": "^14.0.1",
+    "zod": "^4.1.12"
+  }
+}

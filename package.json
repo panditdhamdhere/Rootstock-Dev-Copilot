@@ -14,6 +14,7 @@
     "dev:vscode": "npm run -w @rsk/vscode dev",
     "start": "npm run -w @rsk/cli dev --",
     "smoke": "tsx scripts/prod-smoke.ts",
+    "proof:rsk-mcp": "tsx scripts/proof-rsk-mcp-integration.ts",
     "live:readiness": "tsx scripts/live-readiness.ts",
     "verify:prod": "npm run lint && npm run typecheck && npm run test && npm run smoke",
     "ready": "npm run verify:prod && npm run live:readiness",
@@ -32,6 +33,7 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
     "commander": "^14.0.1",
     "zod": "^4.1.12"
   }
